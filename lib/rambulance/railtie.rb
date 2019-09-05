@@ -1,6 +1,6 @@
 module Rambulance
   class Railtie < Rails::Railtie
-    initializer 'rambulance', after: :prepend_helpers_path do |app|
+    initializer 'rambulance' do |app|
       ActiveSupport.on_load(:action_controller) do
         require "rambulance/exceptions_app"
       end
